@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/wedding_yt'),
+  history: createWebHistory(process.env.PUBLIC_URL),
   routes,
 });
 
