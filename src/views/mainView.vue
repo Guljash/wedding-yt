@@ -93,6 +93,7 @@ import {onMounted, ref} from 'vue';
 import {useParseNames} from '@/uses/useParseNamesByUrl';
 
 const visibleRef = ref(false)
+const indexRef = ref(0) 
 const imgsRef = ref<string[] | string>([])
 
 const onShow = () => {
