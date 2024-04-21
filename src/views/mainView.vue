@@ -40,14 +40,14 @@
             <picture>
               <source srcset="@/assets/int-s.jpg" media="(max-width: 767px)">
               <source srcset="@/assets/int-m.jpg" media="(max-width: 1023px)">
-              <img srcset="@/assets/int-l.jpg" alt="Interior">
+              <img @click="showSingle('/wedding-yt/img/int-l.bba88583.jpg')" srcset="@/assets/int-l.jpg" alt="Interior">
             </picture>
           </div>
           <div>
             <picture>
               <source srcset="@/assets/ext-s.jpg" media="(max-width: 767px)">
               <source srcset="@/assets/ext-m.jpg" media="(max-width: 1023px)">
-              <img srcset="@/assets/ext-l.jpg" alt="Exterior">
+              <img @click="showSingle('/wedding-yt/img/ext-l.aa33fd2c.jpg')" srcset="@/assets/ext-l.jpg" alt="Exterior">
             </picture>
           </div>
         </div>
@@ -77,12 +77,36 @@
         </div>
       </div>
     </section>
+    <vue-easy-lightbox
+      :visible="visibleRef"
+      :imgs="imgsRef"
+      :index="indexRef"
+      moveDisabled
+      rotateDisabled
+      @hide="onHide"
+    ></vue-easy-lightbox>
   </div>
 </template>
 
-<script setup>
-import {onMounted} from 'vue';
-import {useParseNames} from '@/uses/useParseNamesByUrl.ts';
+<script setup lang="ts">
+import {onMounted, ref} from 'vue';
+import {useParseNames} from '@/uses/useParseNamesByUrl';
+
+const visibleRef = ref(false)
+const imgsRef = ref<string[] | string>([])
+
+const onShow = () => {
+  visibleRef.value = true
+}
+
+const onHide = () => {
+  visibleRef.value = false
+}
+
+const showSingle = (href: string) => {
+      imgsRef.value = href
+      onShow()
+    }
 
 const {parseNamesByUrl} = useParseNames()
 
@@ -285,6 +309,7 @@ h1 span {
   }
 
   .adaptive-section img{
+    cursor: pointer;
     max-width: 300px;
   }
 
