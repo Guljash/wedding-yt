@@ -3,8 +3,13 @@ import mainView from "../views/mainView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/main/:id",
+    path: "/",
     name: "main",
+    component: mainView,
+  },
+  {
+    path: "/main/:id",
+    name: "main2",
     component: mainView,
   },
 ];
