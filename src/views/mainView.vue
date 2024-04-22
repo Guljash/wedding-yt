@@ -70,7 +70,7 @@
         <div class="adaptive-display-l-gr">
           <img class="w-100" src="@/assets/dancePhoto.jpg" alt="dancePhoto">
           <div class="df-wr">
-            <h3 class="w-85 ta-l welcome">Вы придёте? :)</h3>
+            <h3 class="w-85 ta-l welcome">{{ parseNamesByUrl.welcomeText }}? :)</h3>
             <p class="w-85 ta-l p-24">Очень ждём каждого гостя и просим отметиться в форме, чтобы мы точно понимали, сколько гостей будет.</p>
             <a class="w-85" href="https://forms.yandex.ru/u/661bbfaf068ff086b675c96d">
               <button class="main-btn mulish800 p-15 w-100">Перейти в форму</button>
