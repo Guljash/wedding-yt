@@ -460,7 +460,7 @@ h1 span {
   }
 }
 
-@media screen and (min-width: 1600px) {
+/* @media screen and (min-width: 1600px) {
   section>div {
     max-width: 1400px;
   }
@@ -485,6 +485,6 @@ h1 span {
     width: 600px;
   }
 
-}
+} */
 </style>
 
