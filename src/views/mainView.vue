@@ -72,7 +72,7 @@
           <div class="df-wr">
             <h3 class="w-85 ta-l welcome">Вы придёте? :)</h3>
             <p class="w-85 ta-l p-24">Очень ждём каждого гостя и просим отметиться в форме, чтобы мы точно понимали, сколько гостей будет.</p>
-            <a class="w-85" href="https://www.figma.com/file/UoYYu27xJN1jUY32kw36aM/Сайт-приглашение-на-свадьбу?type=design&node-id=49-26&mode=design&t=ZhlqLCsHPzSZbwmx-0">
+            <a class="w-85" href="https://forms.yandex.ru/u/661bbfaf068ff086b675c96d">
               <button class="main-btn mulish800 p-15 w-100">Перейти в форму</button>
             </a>
           </div>
