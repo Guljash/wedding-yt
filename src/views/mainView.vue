@@ -6,15 +6,15 @@
           <h1>ЯНА<span>&</span>АЛЕКСЕЙ</h1>
           <h2>06.07.2024</h2>
         </div>
-        <picture>
+        <picture class="p-24">
           <source srcset="@/assets/mainPhoto-s.jpg" media="(max-width: 767px)">
           <source srcset="@/assets/mainPhoto-m.jpg" media="(max-width: 1023px)">
           <img srcset="@/assets/mainPhoto-l.jpg" alt="Exterior">
         </picture>
-        <div>
-          <h3 class="w-85">{{ parseNamesByUrl.name }}!</h3>
-          <p class="w-85 p-15">Мы счастливы пригласить {{ parseNamesByUrl.pronoun }} на нашу свадьбу, этот особенный день мы хотим провести в кругу самых близких нам людей</p>
-          <div class="w-85">
+        <div class="w-85">
+          <h3 class="p-15-bot"> {{ parseNamesByUrl.name }}!</h3>
+          <p class="p-15-bot">Мы счастливы пригласить {{ parseNamesByUrl.pronoun }} на нашу свадьбу, этот особенный день мы хотим провести в кругу самых близких нам людей</p>
+          <div>
             <img src="@/assets/heartLarge.png" alt="heart">
           </div>
         </div>
@@ -67,12 +67,14 @@
           <img class="p-24" src="@/assets/datepick.svg" alt="date">
           <p class="w-100 p-30-bot ta-l">Дорогие гости, если ваш выбор подарка пал между цветами и алкогольным напитком, смело выбирайте то, что не завянет :)</p>
         </div>
-        <div class="w-85 adaptive-display-l-gr">
+        <div class="adaptive-display-l-gr">
           <img class="w-100" src="@/assets/dancePhoto.jpg" alt="dancePhoto">
-          <div>
+          <div class="df-wr">
             <h3 class="w-85 ta-l welcome">Вы придёте? :)</h3>
             <p class="w-85 ta-l p-24">Очень ждём каждого гостя и просим отметиться в форме, чтобы мы точно понимали, сколько гостей будет.</p>
-            <button class="w-100 p-15 main-btn mulish800">Перейти в форму</button>
+            <a class="w-85" href="https://www.figma.com/file/UoYYu27xJN1jUY32kw36aM/Сайт-приглашение-на-свадьбу?type=design&node-id=49-26&mode=design&t=ZhlqLCsHPzSZbwmx-0">
+              <button class="main-btn mulish800 p-15 w-100">Перейти в форму</button>
+            </a>
           </div>
         </div>
       </div>
@@ -88,7 +90,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang='ts'>
 import {onMounted, ref} from 'vue';
 import {useParseNames} from '@/uses/useParseNamesByUrl';
 
@@ -226,6 +228,10 @@ h1 span {
   padding: 15px 0;
 }
 
+.p-15-bot {
+  padding-bottom: 15px;
+}
+
 .p-24 {
   padding: 24px 0;
 }
@@ -294,6 +300,17 @@ h1 span {
 
 .adaptive-display-m {
   display: none;
+}
+
+.adaptive-display-l-gr-head img {
+  max-width: 100%;
+}
+
+.df-wr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -398,6 +415,7 @@ h1 span {
     padding-bottom: 100px;
     align-items: center;
     gap: 60px;
+    width: 85%;
   }
 
   .adaptive-display-l-gr button {
@@ -435,6 +453,10 @@ h1 span {
 
   .adaptive-display-l-gr-head picture img{
     width: 400px;
+  }
+
+  .df-wr {
+    display: block;
   }
 }
 
